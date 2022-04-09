@@ -10,8 +10,8 @@ import { EmployeeService } from '../employee.service';
 })
 export class EmployeeDetailsComponent implements OnInit {
 
-  id!: number
-  employee!: Employee;
+  id: number
+  employee: Employee
   constructor(private route: ActivatedRoute, private employeService: EmployeeService) { }
 
   ngOnInit(): void {
