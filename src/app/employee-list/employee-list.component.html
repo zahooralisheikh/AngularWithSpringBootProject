@@ -1,23 +1,25 @@
 <h2 class="text-center"> Employee List</h2>
-<table class = "table table-striped">
+<table class="table table-striped">
     <thead>
         <tr>
             <th> First_Name</th>
             <th> Last_Name </th>
             <th> Email_Id</th>
-            <!-- <th> Actions </th> -->
+            <th> Actions </th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor = "let employee of employees" >
+        <tr *ngFor="let employee of employees">
             <td> {{ employee.firstName }} </td>
             <td> {{ employee.lastName }} </td>
             <td> {{ employee.emailId }} </td>
-             <!-- <td>
-                <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>
-                <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-                <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
-            </td>  -->
+            <td>
+                <button (click)="updateEmployee(employee.id)" class="btn btn-info"> Update</button>
+                <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left: 10px">
+                    Delete</button>
+                 <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">
+                    View</button> 
+            </td>
         </tr>
-    </tbody> 
+    </tbody>
 </table>
